@@ -1,0 +1,32 @@
+$pl: "personnelList";
+
+// Global colors
+$c-white: #fff;
+$c-black: #000;
+
+// Greyscale tones
+$c-grey100: #f1f1f1;
+$c-grey100-hover: #f8f8f8;
+$c-grey200: #c8c8c8;
+$c-grey200-hover: #e4e4e4;
+$c-grey300: #767676;
+$c-grey300-hover: #bababa;
+$c-grey400: #4d4d4d;
+$c-grey400-hover: #a6a6a6;
+$c-grey500: #151515;
+$c-grey500-hover: #8a8a8a;
+$c-grey600: #111;
+$c-grey600-hover: #888;
+
+// Font
+$font-base-size: 16px;
+$font-primary: $c-black;
+$font-link: #006fc6;
+
+// Breakpoints
+$phone: 575px;
+$phablet: 767px;
+$tablet: 991px;
+$m-desktop: 1199px;
+$desktop: 1399px;
+$xl-desktop: 1599px;

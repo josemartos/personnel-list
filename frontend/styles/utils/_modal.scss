@@ -1,0 +1,118 @@
+.#{$pl}_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.#{$pl}_modal_container {
+  min-width: 320px;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 500px;
+  max-height: 100vh;
+  border-radius: 2px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.#{$pl}_modal_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.#{$pl}_modal_close {
+  margin-left: auto;
+  color: $c-grey400;
+  background-color: $c-white;
+  border: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $c-white;
+    outline: none;
+  }
+
+  &:before {
+    content: "\2715";
+  }
+}
+
+.#{$pl}_modal_header .#{$pl}_modal_close .#{$pl}_modal_content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+// Animation
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.#{$pl}_modal-slideEffect {
+  display: none;
+}
+
+.#{$pl}_modal-slideEffect.is-open {
+  display: block;
+}
+
+.#{$pl}_modal-slideEffect[aria-hidden="false"] .#{$pl}_modal_overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.#{$pl}_modal-slideEffect[aria-hidden="false"] .#{$pl}_modal_container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.#{$pl}_modal-slideEffect[aria-hidden="true"] .#{$pl}_modal_overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.#{$pl}_modal-slideEffect[aria-hidden="true"] .#{$pl}_modal_container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.#{$pl}_modal-slideEffect .#{$pl}_modal_container,
+.#{$pl}_modal-slideEffect .#{$pl}_modal_overlay {
+  will-change: transform;
+}

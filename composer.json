@@ -1,0 +1,35 @@
+{
+  "name": "josemartos/personnel-list",
+  "description": "Simple React plugin to handle and visualize the members of a company",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "company",
+    "members",
+    "list",
+    "react",
+    "gutenberg",
+    "wordpress",
+    "wp"
+  ],
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Jose Martos",
+      "email": "martosjosele@gmail.com",
+      "homepage": "http://www.martosjose.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JoseMartos\\PersonnelList\\": "src"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

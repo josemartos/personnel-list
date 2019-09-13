@@ -1,0 +1,55 @@
+.#{$pl}_item {
+  border-bottom: 1px solid $c-grey200;
+  color: $c-black;
+  display: flex;
+  border-radius: 2px;
+  align-items: center;
+  padding: 0.5rem !important;
+  margin-bottom: 0 !important;
+
+  &:last-of-type {
+    border: none;
+  }
+
+  img {
+    border-radius: 50%;
+    margin-right: 1rem;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.#{$pl}_item-hoverable {
+  cursor: pointer;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background-color: $c-grey100;
+  }
+}
+
+.#{$pl}_item_title {
+  font-size: 16px !important;
+  margin-bottom: 0.3em !important;
+}
+
+.#{$pl}_item_position {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.#{$pl}_item_description {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: $c-grey300;
+}
+
+.#{$pl}_item_info {
+  flex: 1;
+}
+
+.#{$pl}_item_actions {
+  button:first-of-type {
+    margin-right: 0.5rem;
+  }
+}

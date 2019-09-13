@@ -1,0 +1,35 @@
+.form_fields {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form_actions {
+  padding: 5px 0 0 5px;
+
+  > button:first-child {
+    margin-right: 0.5rem !important;
+  }
+}
+
+.form_field {
+  border: 0;
+  padding: 0.5rem;
+  margin: 0 0 5px 5px;
+  font-size: 12px;
+  border: 1px solid $c-grey200;
+  border-radius: 2px;
+  color: $c-grey400;
+
+  &:focus {
+    color: $c-grey400;
+    border: 1px solid $c-grey300;
+  }
+  &::placeholder {
+    color: $c-grey200;
+  }
+}
+
+.form_textarea {
+  resize: none;
+}
